@@ -1,6 +1,6 @@
 
 class Hamming
-  def compute(strand1, strand2)
+  def self.compute(strand1, strand2)
     if strand1.length != strand2.length
       raise ArgumentError, "DNA strands must be the same length! (Strand 1 has #{strand1.length} letters while Strand 2 has #{strand2.length}letters.)"
     end
