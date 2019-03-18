@@ -1,4 +1,4 @@
-def words(words)
+def word_count(words)
     words_array = words.split(" ")
     hashify = Hash.new(0)
 
