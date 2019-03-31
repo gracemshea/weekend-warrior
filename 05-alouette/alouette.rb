@@ -15,13 +15,11 @@ class Alouette
   end
 
   def self.verse(verse_num)
-    verses = ""
-
-    line_one = lines_for_verse(verse_num)[0]
-    line_one.slice! "!"
-    line_one << "."
+    first_line = lines_for_verse(verse_num)[0]
+    first_line.slice! "!"
+    first_line << "."
     2.times do
-      verses << "Je te plumerai #{line_one[3, (line_one.length - 1)]}\n"
+      verses << "Je te plumerai #{first_line[3, (first_line.length - 1)]}\n"
     end
 
     i = 0
@@ -31,6 +29,7 @@ class Alouette
       end
       i += 1
     end
+
     verses = verses + ["Alouette!\n", "Alouette!\n", "A-a-a-ah"]
     verses = verses.join
     return verses
