@@ -39,7 +39,12 @@ class Alouette
   def self.sing
     lyrics = ""
     refrain = "Alouette, gentille alouette,\nAlouette, je te plumerai."
-
+    i = 0
+    while i < NUM_OF_VERSES
+      lyrics << "#{refrain}\n\n"
+      lyrics += "#{verse(i)}\n\n"
+      i += 1
+    end
     lyrics += refrain
     return lyrics
   end
